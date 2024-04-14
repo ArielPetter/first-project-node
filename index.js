@@ -1,9 +1,12 @@
-const express = require('express');
-const uuid = require('uuid');
-const port = 3000;
+//está sendo importado: / Apenas utilizando outra forma que não import express from 'express' por ex 
+const express = require('express'); 
+const uuid = require('uuid'); 
+const cors = require("cors");
+const port = 3001;
 
 const app = express();
 app.use(express.json())
+app.use(cors())
 
 /* forma de query params
 app.get('/users', (request, response) => {
